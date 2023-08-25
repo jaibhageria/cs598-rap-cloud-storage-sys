@@ -1,0 +1,4 @@
+## B-trees, logging, and LSMs : Compare these different ways of organizing data (in terms of performance) for  
+## updates, reads, and range queries. Arrange the methods for each workload (from best performing to worst performing).  
+## Keep your answers short.
+---
