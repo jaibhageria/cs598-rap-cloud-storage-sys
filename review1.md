@@ -1,17 +1,16 @@
 ### B-trees, logging, and LSMs : Compare these different ways of organizing data (in terms of performance) for updates, reads, and range queries. Arrange the methods for each workload (from best performing to worst performing). Keep your answers short.
 ---
 Reading: [Wisckey](https://www.usenix.org/system/files/conference/fast16/fast16-papers-lu.pdf), [LSMs](https://www.cs.umb.edu/~poneil/lsmtree.pdf) [optional]
-|Updates|Reads|Range Queries|
-|---|---|---|
-|LSMs|B-trees|LSMs|
-|Logging|LSMs|B-trees|
-|B-trees|Logging|Logging|
+||Updates|Reads|Range Queries|
+|---|---|---|---|
+|**Best**|LSMs|B-trees|LSMs|
+|**Better**|Logging|LSMs|B-trees|
+|**Good**|B-trees|Logging|Logging|
 
-The above table is arranged from best performing to worst, top to bottom for each operation.
 The reasoning for the above answer is below
 
 #### Updates
-- LSMs: Write optimized. Writes to in-memory buffer and are flushes in batches, sequentially to disk.
+- LSMs: Write optimized. Writes to in-memory buffer and are flushed in batches, sequentially to disk.
 - Logging: A single line is appended to end of log file. Writes sequentially directly on disk.
 - B-trees: Involves random disk writes, may involve several pages/blocks and entire page overwrite
 
