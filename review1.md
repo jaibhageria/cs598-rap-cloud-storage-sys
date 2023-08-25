@@ -6,3 +6,9 @@ Reading: [Wisckey](https://www.usenix.org/system/files/conference/fast16/fast16-
 |LSMs|B-trees|LSMs|
 |Logging|LSMs|B-trees|
 |B-trees|Logging|Logging|
+
+The above table is arranged from best performing to worst, top to bottom for each operation.
+The reasoning for the above answer is below
+
+#### Updates
+-
